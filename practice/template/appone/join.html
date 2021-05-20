@@ -1,0 +1,17 @@
+{% extends 'appone/index.html' %}
+{% block body_block %}
+{% load staticfiles %}
+
+    <h1>SIGN UP!</h1>
+    <img src="{% static "images/matrixpill.png" %}" alt="image not found">
+    <div class="jumbotron">
+      <form  method="post">
+        {{form.as_p}}
+        {% csrf_token %}
+        <input type="submit" class="btn btn-primary" value="Submit">
+      </form>
+
+    </div>
+
+
+    {% endblock %}

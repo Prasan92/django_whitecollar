@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>WHITE COLLARS CLUB</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container">
+        <ul class="nav navbar-nav">
+          <li><a class="navbar-brand" href="{% url 'index' %}">WHITE COLLARS HOME</a></li>
+          <li><a class="navbar-link" href="{% url 'appone:join' %}">JOIN</a></li>
+          <li><a class="navbar-link" href="{% url 'appone:members' %}">MEMBERS</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="jumbotron">
+        {% block body_block %}
+        {% load staticfiles %}
+        <h1>WELCOME TO WHITE COLLARS CLUB!!</h1>
+        <img src="{% static "images/whitecollar.jpg" %}" alt="image not found">
+        <h4 class="display-4">Wanna be a WHITE COLLAR then Sign Up!!</h4>
+        <h4 class="display-4">Aleady a MEMBER!</h4>
+        <h4 class="display-4">Check out MEMBERS of WHITE COLLARS</h4>
+        {% endblock %}
+      </div>
+    </div>
+  </body>
+</html>

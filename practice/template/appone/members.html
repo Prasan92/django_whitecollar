@@ -1,0 +1,22 @@
+{% extends "appone/index.html" %}
+{% block body_block %}
+<div class="container">
+  <div class="jumbotron">
+    <h1>MEMBERS OF WHITE COLLARS</h1>
+    {% for mem in members %}
+    <ul class="list-group">
+
+      <li class="list-group-item">{{mem.name}}
+        <ul>
+        <li>AGE : {{mem.age}}</li>
+        <li>EMAIL : {{mem.email}}</li>
+        </ul>
+      </li>
+
+    </ul>
+
+    {% endfor %}
+
+  </div>
+</div>
+    {% endblock %}
